@@ -10,6 +10,8 @@ function CuboidMaker(length, width, height){
   this.length = length;
   this.width = width;
   this.height =  height;
+  this.volume = (this.length * this.width * this.height);
+  this.surfaceArea = (2 * (this.length * this.width + this.length * this.height + this.width * this.height));
 }
 
 /* == Step 2: Volume Method ==
@@ -19,7 +21,7 @@ function CuboidMaker(length, width, height){
 */
 
 CuboidMaker.prototype.getVolume = function(){
-  return this.length * this.width * this.height;
+  return this.volume;
 }
 
 
@@ -30,7 +32,7 @@ CuboidMaker.prototype.getVolume = function(){
 */
 
 CuboidMaker.prototype.getSurfaceArea = function() {
-  return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+  return this.surfaceArea;
 }
 
 
